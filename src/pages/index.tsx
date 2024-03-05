@@ -12,11 +12,7 @@ export default function Home() {
 
   const story = {
     title: "Notre histoire",
-<<<<<<< HEAD
-    subtitle: "Le premier Toulouse'hein à été ouvert en 2008 sur la place du capitole. À l'époque ce concept novateur a beaucoup fait parlé de lui car l'image du burger été encore associé à un repas de mauvaise qualité. Cette réputation venait des chaines de restaurants américaines venu s'implanter en France sans considération de la complexité de la culture française, et en portant peu attention au rapport que les français ont avec la nourriture. C'est pourquoi nous avons créer ce concept de burger fait maison avec des ingrédients de qualité.",
-=======
     subtitle: "Le premier Toulouse'hein à été ouvert en 2008 sur la place du capitole. À l'époque ce concept novateur a beaucoup fait parlé de lui car l'image du burger été encore associé à un repas de mauvaise qualité. Cette réputation venait des chaines de restaurants américaines venu s'implanter en France sans considération de la complexité de la culture française, et en portant peu attention au rapport que les français ont avec la nourriture. C'est pourquoi nous avons créer ce concept de burger fais maison avec des ingrédients de qualité.",
->>>>>>> 746ce29 (with files it';s better)
     milestones: [
       "2008 - Premier restaurant ouvert au Capitole",
       "2009 - Recommandé dans plus de 15 articles de presse culinaire",

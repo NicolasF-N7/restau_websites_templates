@@ -23,16 +23,16 @@ export const routes: Route[] = [
     path: "/",
   },
   {
-    title: "Portfolio",
-    path: "/portfolio",
+    title: "Menu",
+    path: "/menu",
   },
   {
-    title: "Nicolas",
-    path: "/nicolas",
+    title: "Horaires",
+    path: "/horaires",
   },
   {
-    title: "Contact",
-    path: "/contact",
+    title: "Accès",
+    path: "/acces",
   },
 ];
 
@@ -49,19 +49,19 @@ export const footer_columns = [
         },
         {
           name: "Menu",
-          link: "/portfolio",
+          link: "/menu",
           icon: "",
           leavesWebsite: false,
         },
         {
           name: "Horaires",
-          link: "/nicolas",
+          link: "/horaires",
           icon: "",
           leavesWebsite: false,
         },
         {
-          name: "Maps",
-          link: "/contact",
+          name: "Acces",
+          link: "/acces",
           icon: "",
           leavesWebsite: false,
         },
