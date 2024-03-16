@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
-
 import Link from "next/link";
-import { routes } from "@/data/shared";
-// TO RE ENABLE ONCE WORKING WITHOUT
-// import useDelayedRender from "use-delayed-render";
+import {Business, Navigation} from '@/data/types/business-data-types'
+import {transformToSafeUrl} from "@/components/utility/functions"
 
-export default function MobileNavbar() {
+
+export default function MobileNavbar({ business, navigation } : {business: Business, navigation: Navigation}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  /*const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-    isMenuOpen,
-    {
-      enterDelay: 20,
-      exitDelay: 300,
-    }
-  );*/
+  
 
   function toggleMenu() {
     if (isMenuOpen) {
@@ -34,16 +27,21 @@ export default function MobileNavbar() {
   return (
     <nav>
       <div
-        className={`w-full justify-between flex items-center ${isMenuOpen && 'bg-menu-bg'} p-5`}
+        className={`w-full justify-between flex items-center ${isMenuOpen && 'bg-mobile-menu-bg'} p-5`}
         style={{ zIndex: 101 }}>
 
         <li className="list-none font-bold text-lg">
           <Link href="/">
-            <img
-              className="mr-3"
-              src="/previews/mobile_header_thumbnail.png"
-              width="160"/>
+            <span className="text-charcoal text-xl flex items-center">
+              <img
+                className="mr-3"
+                src="/logo.png"
+                width="96"/>
 
+                <h2>
+                  {business.name}
+                </h2>
+            </span>
           </Link>
         </li>
         <button
@@ -58,20 +56,20 @@ export default function MobileNavbar() {
       </div>
       {isMenuOpen && (
         <ul
-          className={`menu flex flex-col absolute bg-menu-bg
+          className={`menu flex flex-col absolute bg-mobile-menu-bg
             ${isMenuOpen && "menuRendered"}`}>
 
-          {routes.map((item, index) => {
+          {navigation.menus.map((menu, index) => {
+            const menuRoute = "#" + transformToSafeUrl(menu);
+            
             return (
               <li
-                className="w-full border-b border-zomp text-charcoal text-sm font-semibold"
+                className="w-full border-b border-zomp text-zomp text-sm font-semibold"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
                 key={index}>
 
                 <div className="flex w-auto pb-4">
-                  <Link href={item.path}>
-                    {item.title}
-                  </Link>
+                <Link href={menuRoute}>{menu}</Link>
                 </div>
               </li>
             );
@@ -89,7 +87,7 @@ type menuProps = {
 function MenuIcon(props : menuProps) {
   return (
     <svg
-      className="h-5 w-5 absolute text-charcoal"
+      className="h-6 w-6 absolute text-charcoal"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -110,6 +108,13 @@ function MenuIcon(props : menuProps) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
+      <path
+        d="M2.5 17.5H17.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -117,7 +122,7 @@ function MenuIcon(props : menuProps) {
 function CrossIcon(props : menuProps) {
   return (
     <svg
-      className="h-5 w-5 absolute text-charcoal"
+      className="h-6 w-6 absolute text-charcoal"
       viewBox="0 0 24 24"
       width="24"
       height="24"

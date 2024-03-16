@@ -1,8 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import { routes } from "@/data/shared";
+import {Business, Navigation} from '@/data/types/business-data-types'
+import {transformToSafeUrl} from "@/components/utility/functions"
 
-function Navbar({ currentPage } : {currentPage: string}) {
+
+function Navbar({ currentPage, business, navigation } : {currentPage: string, business: Business, navigation: Navigation}) {
   return (
     <nav className="flex items-center justify-between">
       <li className="list-none font-bold text-lg cursor-pointer">
@@ -10,39 +12,29 @@ function Navbar({ currentPage } : {currentPage: string}) {
           <span className="text-charcoal text-xl flex items-center">
             <img
               className="mr-2 scale-90 transform hover:scale-100 transition-transform duration-500"
-              src="/favicon/favicon-180.png"
+              src="/logo.png"
               width="80"/>
 
-            {"Nicolas".split("").map((letter, index) => {
-              return (
-                <span key={index} className="hover:text-sunglow hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">
-                  {letter}
-                </span>
-              );
-            })}
-            &nbsp;
-            {"Foin".split("").map((letter, index) => {
-              return (
-                <span key={index} className="hover:text-sunglow hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">
-                  {letter}
-                </span>
-              );
-            })}
+              <h2 className="hover:text-sunglow hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">
+                {business.name}
+              </h2>
           </span>
         </Link>
       </li>
       <ul className="flex items-center space-x-10">
-        {routes.map((item, index) => {
+        {navigation.menus.map((menu, index) => {
+          const menuRoute = "#" + transformToSafeUrl(menu);
+
           return (
             <li
               key={index}
               className={`list-none text-charcoal ${
-                currentPage === item.title
+                currentPage === menu
                   ? "opacity-100"
                   : "opacity-40 hover:opacity-100 transition-opacity"
               }`}
             >
-              <Link href={item.path}>{item.title}</Link>
+              <Link href={menuRoute}>{menu}</Link>
             </li>
           );
         })}
