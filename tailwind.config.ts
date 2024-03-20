@@ -22,7 +22,8 @@ const config: Config = {
         'olivine': '#A1C181',
         'zomp': '#619B8A',
 
-        'mobile-menu-bg': '#450101',
+        'mobile-menu-bg': '#A09181',
+        "footer-bg": '#A09181'
       }
     },
   },

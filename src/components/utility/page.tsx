@@ -61,18 +61,18 @@ function Page({ currentPage, business, navigation, children } : {currentPage: st
 
         {/* Desktop nav bar */}
         <div className="p-5 hidden sm:block z-100">
-          <Navbar currentPage={currentPage} business={business} navigation={navigation}/>
+          <Navbar currentPage={currentPage} businessInfo={business} navigationInfo={navigation}/>
         </div>
 
         {/* Mobile nav bar */}
         <div className="block sm:hidden z-100">
-          <MobileNavbar business={business} navigation={navigation}/>
+          <MobileNavbar businessInfo={business} navigationInfo={navigation}/>
         </div>
 
         {children}
 
       </main>
-      <Footer />
+      <Footer businessInfo={business} navigationInfo={navigation} />
     </div>
   );
 }

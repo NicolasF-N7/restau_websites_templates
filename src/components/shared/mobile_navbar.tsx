@@ -4,7 +4,7 @@ import {Business, Navigation} from '@/data/types/business-data-types'
 import {transformToSafeUrl} from "@/components/utility/functions"
 
 
-export default function MobileNavbar({ business, navigation } : {business: Business, navigation: Navigation}) {
+export default function MobileNavbar({ businessInfo, navigationInfo } : {businessInfo: Business, navigationInfo: Navigation}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
 
@@ -39,7 +39,7 @@ export default function MobileNavbar({ business, navigation } : {business: Busin
                 width="96"/>
 
                 <h2>
-                  {business.name}
+                  {businessInfo.name}
                 </h2>
             </span>
           </Link>
@@ -59,7 +59,7 @@ export default function MobileNavbar({ business, navigation } : {business: Busin
           className={`menu flex flex-col absolute bg-mobile-menu-bg
             ${isMenuOpen && "menuRendered"}`}>
 
-          {navigation.menus.map((menu, index) => {
+          {navigationInfo.menus.map((menu, index) => {
             const menuRoute = "#" + transformToSafeUrl(menu);
             
             return (

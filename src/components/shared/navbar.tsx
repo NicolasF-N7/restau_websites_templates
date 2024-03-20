@@ -4,7 +4,7 @@ import {Business, Navigation} from '@/data/types/business-data-types'
 import {transformToSafeUrl} from "@/components/utility/functions"
 
 
-function Navbar({ currentPage, business, navigation } : {currentPage: string, business: Business, navigation: Navigation}) {
+function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: string, businessInfo: Business, navigationInfo: Navigation}) {
   return (
     <nav className="flex items-center justify-between">
       <li className="list-none font-bold text-lg cursor-pointer">
@@ -16,13 +16,13 @@ function Navbar({ currentPage, business, navigation } : {currentPage: string, bu
               width="80"/>
 
               <h2 className="hover:text-sunglow hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">
-                {business.name}
+                {businessInfo.name}
               </h2>
           </span>
         </Link>
       </li>
       <ul className="flex items-center space-x-10">
-        {navigation.menus.map((menu, index) => {
+        {navigationInfo.menus.map((menu, index) => {
           const menuRoute = "#" + transformToSafeUrl(menu);
 
           return (
