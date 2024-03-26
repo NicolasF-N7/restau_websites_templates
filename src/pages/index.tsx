@@ -3,6 +3,7 @@ import Page from "@/components/utility/page";
 import Story from "@/components/sections/story";
 import HeroPictSide from "@/components/sections/hero-pict-side";
 import Gallery from "@/components/sections/gallery";
+import Menu from "@/components/sections/menu";
 
 // Data import
 import {business_data} from "@/data/business-data"
@@ -14,7 +15,8 @@ export default function Home() {
       {/* SECTION TO BUILD & CONNECT */}
       <HeroPictSide content={business_data.website_content.sections.hero} />
       <Story content={business_data.website_content.sections.story}/>
-      <Gallery />
+      <Gallery content={business_data.website_content.sections.gallery}/>
+      <Menu content={business_data.website_content.sections.menu}/>
 
     </Page>
   );

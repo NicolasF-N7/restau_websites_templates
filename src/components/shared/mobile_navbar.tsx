@@ -32,7 +32,7 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
 
         <li className="list-none font-bold text-lg">
           <Link href="/">
-            <span className="text-charcoal text-xl flex items-center">
+            <span className={`${isMenuOpen? 'text-white' : 'text-charcoal' } text-xl flex items-center`}>
               <img
                 className="mr-3"
                 src="/logo.png"
@@ -64,7 +64,7 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
             
             return (
               <li
-                className="w-full border-b border-zomp text-zomp text-sm font-semibold"
+                className="w-full border-b border-white text-white text-sm font-semibold"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
                 key={index}>
 

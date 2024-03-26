@@ -23,7 +23,7 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
 
 
   return (
-    <div className="max-w-screen-xl px-8 xl:px-16 mx-auto overflow-hidden">
+    <div id="accueil" className="max-w-screen-xl px-8 xl:px-16 mx-auto overflow-hidden">
       <div>
         
         <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6">
@@ -40,12 +40,12 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
                   hidden: { x: -100, opacity: 0 },
                 }}
                 className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black leading-normal">
+                <h1 className="font-bold text-3xl lg:text-4xl xl:text-5xl text-black leading-normal">
                   {content.title}
                 </h1>
-                <p className="text-black mt-4 mb-6">
+                <h3 className="text-black text-xl mt-4 mb-6">
                   {content.subtitle}
-                </p>
+                </h3>
                 <Link href={content.call_to_action.target_link}>
                   <div className='bg-sunglow p-4 rounded-xl hover:bg-pumpkin transition text-md font-semibold'>{content.call_to_action.text}</div>
                 </Link>
