@@ -1,30 +1,31 @@
 import { useEffect, useRef, useMemo } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-function Map({ address }) {
+
+function Map({ address }: {address: string}) {
   const mapRef = useRef(null);
-const geocoder = useMemo(() => new google.maps.Geocoder(), []);
-useEffect(() => {
+  
+  console.log("API KEY: " + String(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY))
+  useEffect(() => {
     const loader = new Loader({
-      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+      apiKey: String(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY),
       version: "weekly",
     });
-loader.load().then(() => {
-      geocoder.geocode({ address: address }, (results, status) => {
-        if (status === "OK") {
-          const map = new google.maps.Map(mapRef.current, {
-            center: results[0].geometry.location,
-            zoom: 8,
-          });
-const marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location,
-          });
-        } else {
-          console.error(`Geocode was not successful for the following reason: ${status}`);
-        }
-      });
-    });
-  }, [address, geocoder]);
-return <div style={{ height: "400px" }} ref={mapRef} />;
+
+    const mapOptions = {
+      center: {
+        lat: 0,
+        lng: 0
+      },
+      zoom: 4
+    };
+
+      loader
+      .importLibrary('maps')
+      .then(({Map}) => {
+        const map = new Map(document.getElementById("map"), mapOptions);
+      })
+  })
+
+  return <div className="h-[20em]" id="map" ref={mapRef} />;
 }
 export default Map;

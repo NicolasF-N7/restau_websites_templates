@@ -31,6 +31,10 @@ type Sections = {
   story: StorySection;
   gallery: GallerySection;
   menu: MenuSection;
+  location: LocationSection;
+  opening_time: OpeningTimeList;
+  useful_info: UsefulInfoSection;
+  contact: ContactSection;
   footer: FooterSection;
 };
 
@@ -67,14 +71,38 @@ export type StorySection = {
   lastParagraph: string;
 };
 
+export type LocationSection = {
+  title: string;
+  address: string;
+};
+
+export type OpeningTimeList = {
+  title: string;
+  opening_days: OpeningTime[];
+};
+
+type OpeningTime =  {
+  day: string;
+  morning: string;
+  evening: string;
+};
+
+export type UsefulInfoSection = {
+  title: string;
+};
+
+export type ContactSection = {
+  title: string;
+};
+
 // Define type for the footer section
 export type FooterSection = Record<string, never>;
 
 export type GallerySection = {
   title: string;
-}
+};
 
 export type MenuSection = {
   title: string;
   call_to_action: CallToAction;
-}
+};

@@ -71,6 +71,56 @@ export const business_data = {
                     "target_link": "menu/menu.pdf"
                 },
             },
+            "location": {
+                "title": "Venez nous voir !",
+                "address": "69 Rue de la Pomme, 31000 Toulouse, France"
+            },
+            "opening_time": {
+                "title": "Nous sommes ouvert",
+                "opening_days": [
+                    {
+                        "day": "Lundi",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                    {
+                        "day": "Mardi",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                    {
+                        "day": "Mercredi",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                    {
+                        "day": "Jeudi",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                    {
+                        "day": "Vendredi",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                    {
+                        "day": "Samedi",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                    {
+                        "day": "Dimanche",
+                        "morning": "9h - 15h",
+                        "evening": "18h - 02h"
+                    },
+                ]
+            },
+            "useful_info": {
+                "title": "Informations utiles"
+            },
+            "contact": {
+                "title": "Contactez nous"
+            },
             "footer": {
                 
             }

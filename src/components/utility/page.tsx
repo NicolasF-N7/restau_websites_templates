@@ -12,9 +12,7 @@ function Page({ currentPage, business, navigation, children } : {currentPage: st
   
   return (
     <div
-      className="w-full m-auto flex flex-col items-center justify-center min-h-screen text-black overflow-hidden md:overflow-visible"
-      style={{ maxWidth: "1200px" }}
-    >
+      className="w-full m-auto flex flex-col items-center justify-center min-h-screen text-black overflow-hidden md:overflow-visible">
       <Head>
         <title>{pageTitle}</title>
 
@@ -69,7 +67,11 @@ function Page({ currentPage, business, navigation, children } : {currentPage: st
           <MobileNavbar businessInfo={business} navigationInfo={navigation}/>
         </div>
 
-        {children}
+        {/* Sections content */}
+        {/* Space y sets margin top and bottom of each child (except outmost children) */}
+        <div className="space-y-8">
+          {children}
+        </div>
 
       </main>
       <Footer businessInfo={business} navigationInfo={navigation} />

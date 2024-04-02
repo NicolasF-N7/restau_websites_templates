@@ -5,11 +5,11 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const Gallery = ({ content } : {content: GallerySection}) => (
-  <div className="overflow-hidden bg-gray-50 max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
+  <div className="overflow-hidden max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
      {/* Title */}
      <h2 className="font-bold text-3xl">{content.title}</h2>
      
-     <div className="flex flex-col lg:flex-row items-center">
+     <div className="flex flex-col lg:flex-row items-center justify-center">
         {/* First block */}
         <div className="flex flex-row">
             {/* First col of image */}
