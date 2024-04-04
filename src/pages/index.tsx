@@ -19,7 +19,7 @@ export default function Home() {
       <Story content={business_data.website_content.sections.story}/>
       <Gallery content={business_data.website_content.sections.gallery}/>
       <Menu content={business_data.website_content.sections.menu}/>
-      <OpeningTimeAndLocationMap openingTimeContent={business_data.website_content.sections.opening_time} locationContent={business_data.website_content.sections.location}/>
+      <OpeningTimeAndLocationMap businessInfo={business_data.business} openingTimeContent={business_data.website_content.sections.opening_time} locationContent={business_data.website_content.sections.location}/>
       <ContactAndInfo contactContent={business_data.website_content.sections.contact} usefulInformationContent={business_data.website_content.sections.useful_info}/>
 
     </Page>

@@ -1,31 +1,43 @@
-import { useEffect, useRef, useMemo } from "react";
-import { Loader } from "@googlemaps/js-api-loader";
+import { useEffect, useRef, useState, useMemo } from "react";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import {Coordinate} from '@/data/types/business-data-types'
 
-function Map({ address }: {address: string}) {
+// const render = (status) => {
+//   switch (status) {
+//     case Status.LOADING:
+//       return <Spinner />;
+//     case Status.FAILURE:
+//       return <ErrorComponent />;
+//     case Status.SUCCESS:
+//       return <MyMapComponent />;
+//   }
+// };
+const gmaps_api_key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+function Map({ businessPosition, businessName }: 
+  {businessPosition: Coordinate, businessName: string}) {
   const mapRef = useRef(null);
-  
-  console.log("API KEY: " + String(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY))
+
   useEffect(() => {
-    const loader = new Loader({
-      apiKey: String(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY),
-      version: "weekly",
-    });
+    if (mapRef.current) {
+      const map = new window.google.maps.Map(mapRef.current, {
+        center: businessPosition,
+        zoom: 16
+      });
 
-    const mapOptions = {
-      center: {
-        lat: 0,
-        lng: 0
-      },
-      zoom: 4
-    };
+      new google.maps.Marker({
+        position: businessPosition,
+        // label: businessName,
+        map,
+      });
+    }
 
-      loader
-      .importLibrary('maps')
-      .then(({Map}) => {
-        const map = new Map(document.getElementById("map"), mapOptions);
-      })
-  })
 
-  return <div className="h-[20em]" id="map" ref={mapRef} />;
+  }, [mapRef, businessPosition]);
+
+  return (
+    <div  ref={mapRef} style={{ height: "400px", width: "800px" }}/>
+  )
 }
 export default Map;
+

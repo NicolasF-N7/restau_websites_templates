@@ -73,8 +73,13 @@ export type StorySection = {
 
 export type LocationSection = {
   title: string;
-  address: string;
+  position: Coordinate;
 };
+
+export type Coordinate = {
+  lat: number;
+  lng: number;
+}
 
 export type OpeningTimeList = {
   title: string;
@@ -93,6 +98,8 @@ export type UsefulInfoSection = {
 
 export type ContactSection = {
   title: string;
+  phone: string;
+  email: string;
 };
 
 // Define type for the footer section

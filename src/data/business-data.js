@@ -57,7 +57,7 @@ export const business_data = {
                     "2008 - Premier restaurant ouvert au Capitole",
                     "2009 - Recommandé dans plus de 15 articles de presse culinaire",
                     "2010 - Première queue de plus de 50 personnes pour notre restaurant",
-                    "2012 - Ouverture du second Toulouse'Hein à Minimes",
+                    "2012 - Ouverture du second Toulouse'Hein aux Minimes",
                 ],
                 "lastParagraph": "Venez goûter le gout de l'authentique"
             },
@@ -73,7 +73,10 @@ export const business_data = {
             },
             "location": {
                 "title": "Venez nous voir !",
-                "address": "69 Rue de la Pomme, 31000 Toulouse, France"
+                "position": {
+                    "lat": 43.60373567060707,
+                    "lng": 1.4444728834329283
+                },
             },
             "opening_time": {
                 "title": "Nous sommes ouvert",
@@ -119,7 +122,9 @@ export const business_data = {
                 "title": "Informations utiles"
             },
             "contact": {
-                "title": "Contactez nous"
+                "title": "Contactez nous",
+                "phone": "0575846895",
+                "email": "touloushein@gmail.com"
             },
             "footer": {
                 

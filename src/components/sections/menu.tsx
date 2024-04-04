@@ -22,7 +22,7 @@ const Menu = ({ content } : {content: MenuSection}) => (
             transition={{ duration: 0.5 }}
             variants={{
                 visible: { scale: 1, opacity: 1 },
-                hidden: { scale: 5, opacity: 0 },
+                hidden: { scale: 0, opacity: 0 },
             }}
             className="m-1 row-start-2 sm:row-start-1">
             <Link href={content.call_to_action.target_link} target="_blank">
