@@ -23,7 +23,20 @@ const config: Config = {
         'zomp': '#619B8A',
 
         'mobile-menu-bg': '#1e212b',
-        "footer-bg": '#1e212b'
+        'mainCTA': {
+          "normal": '#FE7F2D',
+          "hover": '#f76201',
+          "text": '#000',
+        },
+        "secondaryCTA": {
+          "normal": "#FCCA46",
+          "hover": "#ffe078",
+          "text": "#000",
+        },
+        "footer-bg": '#1e212b',
+        "navbar": '#984848',
+        "textNavbar": '#eee',
+        "textMobileNavBarOpened": '#fff'
       }
     },
   },

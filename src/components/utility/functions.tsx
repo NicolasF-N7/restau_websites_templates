@@ -6,7 +6,7 @@ export function transformToSafeUrl(text: string): string {
     const withoutAccents = lowercaseText.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     
     // Remove punctuation marks from the string
-    const withoutPunctuation = withoutAccents.replace(/[^\w\s]/g, '');
+    const withoutPunctuation = withoutAccents.replace(/[^\w]/g, '');
   
     return withoutPunctuation;
   }

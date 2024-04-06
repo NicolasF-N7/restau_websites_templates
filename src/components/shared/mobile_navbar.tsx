@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import {Business, Navigation} from '@/data/types/business-data-types'
 import {transformToSafeUrl} from "@/components/utility/functions"
-
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function MobileNavbar({ businessInfo, navigationInfo } : {businessInfo: Business, navigationInfo: Navigation}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,8 +31,7 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
         style={{ zIndex: 101 }}>
 
         <li className="list-none font-bold text-lg">
-          <Link href="/">
-            <span className={`${isMenuOpen? 'text-white' : 'text-charcoal' } text-xl flex items-center`}>
+            <span className={`${isMenuOpen? 'text-textMobileNavBarOpened' : 'text-textNavbar' } text-xl flex items-center`}>
               <img
                 className="mr-3"
                 src="/logo.png"
@@ -42,7 +41,6 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
                   {businessInfo.name}
                 </h2>
             </span>
-          </Link>
         </li>
         <button
           className="burger visible md:hidden"
@@ -55,21 +53,28 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
         </button>
       </div>
       {isMenuOpen && (
-        <ul
-          className={`menu flex flex-col absolute bg-mobile-menu-bg
+        <ul className={`menu flex flex-col absolute bg-mobile-menu-bg
             ${isMenuOpen && "menuRendered"}`}>
 
           {navigationInfo.menus.map((menu, index) => {
-            const menuRoute = "#" + transformToSafeUrl(menu);
+            const menuRoute = transformToSafeUrl(menu);
             
             return (
               <li
-                className="w-full border-b border-white text-white text-sm font-semibold"
+                className="w-full border-b border-white text-textMobileNavBarOpened text-sm font-semibold"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
                 key={index}>
 
                 <div className="flex w-auto pb-4">
-                <Link href={menuRoute}>{menu}</Link>
+                <ScrollLink 
+                  to={menuRoute}
+                  smooth={true}
+                  offset={-10} 
+                  duration={200}
+                  onClick={toggleMenu}
+                  className="cursor-pointer">
+                    {menu}
+                </ScrollLink>
                 </div>
               </li>
             );
@@ -87,7 +92,7 @@ type menuProps = {
 function MenuIcon(props : menuProps) {
   return (
     <svg
-      className="h-6 w-6 absolute text-charcoal"
+      className="h-6 w-6 absolute text-textNavbar"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -122,7 +127,7 @@ function MenuIcon(props : menuProps) {
 function CrossIcon(props : menuProps) {
   return (
     <svg
-      className="h-6 w-6 absolute text-charcoal"
+      className="h-6 w-6 absolute text-textMobileNavBarOpened"
       viewBox="0 0 24 24"
       width="24"
       height="24"

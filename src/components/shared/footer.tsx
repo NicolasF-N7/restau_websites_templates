@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Footer({ businessInfo, navigationInfo } : {businessInfo: Business, navigationInfo: Navigation}) {
   return (
-    <footer className="text-white flex flex-col w-full px-5 py-10 mt-16 border-t-2 border-pumpkin in z-5 bg-footer-bg">
+    <footer className="text-white flex flex-col w-full px-5 py-10 mt-16 border-t-2 border-navbar in z-5 bg-footer-bg">
       <div className="w-full max-w-4xl m-auto flex flex-row justify-around items-start">
         
         {/* Navigation menu links */}
@@ -45,7 +45,7 @@ function Footer({ businessInfo, navigationInfo } : {businessInfo: Business, navi
 
       </div>
 
-      <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center border-t-2 border-pumpkin">
+      <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center border-t-2 border-navbar">
         <div className="flex flex-col items-center justify-center ">
           
           <div className="mt-2 text-xs ">

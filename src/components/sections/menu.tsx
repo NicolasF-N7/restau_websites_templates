@@ -26,7 +26,7 @@ const Menu = ({ content } : {content: MenuSection}) => (
             }}
             className="m-1 row-start-2 sm:row-start-1">
             <Link href={content.call_to_action.target_link} target="_blank">
-              <div className='bg-sunglow py-4 px-16 rounded-xl hover:bg-pumpkin transition text-md font-semibold'>{content.call_to_action.text}</div>
+              <div className='text-mainCTA-text bg-mainCTA-normal hover:bg-mainCTA-hover py-4 px-16 rounded-xl transition text-md font-semibold'>{content.call_to_action.text}</div>
             </Link>
         </motion.div>
       )}
