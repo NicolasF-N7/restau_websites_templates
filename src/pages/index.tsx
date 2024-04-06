@@ -21,7 +21,6 @@ export default function Home() {
       <Menu content={business_data.website_content.sections.menu}/>
       <OpeningTimeAndLocationMap businessInfo={business_data.business} openingTimeContent={business_data.website_content.sections.opening_time} locationContent={business_data.website_content.sections.location}/>
       <ContactAndInfo contactContent={business_data.website_content.sections.contact} usefulInformationContent={business_data.website_content.sections.useful_info}/>
-
     </Page>
   );
 }

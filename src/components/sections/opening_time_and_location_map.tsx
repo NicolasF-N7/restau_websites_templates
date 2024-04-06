@@ -4,7 +4,7 @@ import {Business} from '@/data/types/business-data-types'
 import {LocationSection} from '@/data/types/business-data-types'
 import {OpeningTimeList} from '@/data/types/business-data-types'
 import { InView, useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { ReactElement, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import Map from '@/components/utility/maps';
@@ -13,7 +13,7 @@ const gmaps_api_key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 const render = (status: Status): ReactElement => {
   if (status === Status.LOADING) return <h3>{status} ..</h3>;
   if (status === Status.FAILURE) return <h3>{status} ...</h3>;
-  return null;
+  return <h3>Erreur lors du chargement de la carte google maps</h3>;
 };
 
 const OpeningTimeAndLocationMap = ({ businessInfo, locationContent, openingTimeContent } : {businessInfo: Business, locationContent: LocationSection, openingTimeContent: OpeningTimeList}) => (
