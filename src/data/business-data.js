@@ -20,7 +20,7 @@ export const business_data = {
         "navigation": {
             "menus": [
                 "Accueil",
-                "Menu !",
+                "Menu",
                 "Horaires",
                 "Accès"
             ]
