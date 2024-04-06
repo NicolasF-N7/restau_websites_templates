@@ -22,7 +22,7 @@ function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: st
       <ul className="flex items-center space-x-10">
         {navigationInfo.menus.map((menu, index) => {
           const menuRoute = transformToSafeUrl(menu);
-          console.log(menuRoute)
+          
           return (
             <li
               key={index}

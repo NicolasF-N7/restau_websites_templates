@@ -24,7 +24,7 @@ const config: Config = {
 
         'mobile-menu-bg': '#1e212b',
         'mainCTA': {
-          "normal": '#FE7F2D',
+          "normal": '#FE7F1D',
           "hover": '#f76201',
           "text": '#000',
         },

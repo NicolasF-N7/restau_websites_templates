@@ -25,7 +25,7 @@ const ContactAndInfo = ({ contactContent, usefulInformationContent } : {contactC
             <InView threshold={0.25}>
           {({ ref, inView}) => (
           
-            <div className="flex flex-col justify-center space-y-8 w-1/3 lg:w-full lg:flex-row lg:space-x-8 lg:space-y-0">
+            <div className="flex flex-col justify-center space-y-8 w-full lg:flex-row lg:space-x-8 lg:space-y-0">
               {/* Phone */}
               {contactContent.phone &&
               <motion.div
@@ -37,9 +37,14 @@ const ContactAndInfo = ({ contactContent, usefulInformationContent } : {contactC
                   visible: { x: 0, opacity: 1 },
                   hidden: { x: -100, opacity: 0 },
                 }}>
-                  <a href={`tel:${contactContent.phone}`}>
-                    <div className='text-secondaryCTA-text bg-secondaryCTA-normal hover:bg-secondaryCTA-hover py-4 px-16 rounded-xl transition text-md font-semibold'>Téléphone</div>
-                  </a>
+                  {/* Rounded-xl used twice: once for the bounding box of the inner <a>, and the second time for the design: rounded background / border */}
+                  <div className='mx-[20%] lg:mx-0 rounded-xl overflow-hidden'>
+                    <a href={`tel:${contactContent.phone}`}>
+                      <div className='py-4 px-12 rounded-xl border-4 bg-secondaryCTA-normal border-secondaryCTA-normal hover:bg-secondaryCTA-hover hover:border-secondaryCTA-hover transition'>
+                        <span className='text-center text-secondaryCTA-text text-md font-semibold'>Téléphone</span>
+                      </div>
+                    </a>
+                  </div>
               </motion.div>
               }
 
@@ -54,9 +59,14 @@ const ContactAndInfo = ({ contactContent, usefulInformationContent } : {contactC
                   visible: { x: 0, opacity: 1 },
                   hidden: { x: 100, opacity: 0 },
                 }}>
-                  <a href={`mailto:${contactContent.email}`}>
-                    <div className='text-secondaryCTA-text border-secondaryCTA-normal hover:bg-secondaryCTA-normal border-4 py-4 px-16 rounded-xl transition text-md font-semibold'>Mail</div>
-                  </a>
+                  {/* Rounded-xl used twice: once for the bounding box of the inner <a>, and the second time for the design: rounded background / border */}
+                  <div className='mx-[20%] lg:mx-0 rounded-xl overflow-hidden'>
+                    <a href={`mailto:${contactContent.email}`}>
+                      <div className='py-4 px-12 rounded-xl border-secondaryCTA-normal hover:bg-secondaryCTA-normal border-4 transition'>
+                        <span className='text-center text-secondaryCTA-text text-md font-semibold'>Mail</span>
+                      </div>
+                    </a>
+                  </div>
               </motion.div>
               }
             </div>
