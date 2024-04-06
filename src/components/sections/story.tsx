@@ -62,7 +62,7 @@ const Story = ({ content } : {content: StorySection}) => (
                     visible: { x: 0, opacity: 1 },
                     hidden: { x: 100, opacity: 0 },
                   }}>
-                    <p className="mb-8 lg:mx-4 mx-8 font-light lg:text-xl">{content.subtitle}</p>
+                    <p className="mb-8 text-justify lg:mx-4 mx-8 font-light lg:text-xl">{content.subtitle}</p>
                 </motion.div>
               )}
             </InView>

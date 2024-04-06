@@ -23,10 +23,9 @@ const Menu = ({ content } : {content: MenuSection}) => (
             variants={{
                 visible: { scale: 1, opacity: 1 },
                 hidden: { scale: 0, opacity: 0 },
-            }}
-            className="m-1 row-start-2 sm:row-start-1">
+            }}>
             <Link href={content.call_to_action.target_link} target="_blank">
-              <div className='text-mainCTA-text bg-mainCTA-normal hover:bg-mainCTA-hover py-4 px-16 rounded-xl transition text-md font-semibold'>{content.call_to_action.text}</div>
+              <div className='text-mainCTA-text bg-mainCTA-normal hover:bg-mainCTA-hover py-4 px-16 lg:py-6 lg:px-[5em] rounded-xl transition text-md font-semibold'>{content.call_to_action.text}</div>
             </Link>
         </motion.div>
       )}

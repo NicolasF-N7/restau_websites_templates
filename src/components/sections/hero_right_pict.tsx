@@ -23,10 +23,11 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
 
 
   return (
-    <div id="accueil" className="max-w-screen-xl px-8 xl:px-16 mx-auto overflow-hidden">
+    <div id="accueil" className="max-w-screen-xl px-8  mx-auto overflow-hidden">
       <div>
         
-        <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6">
+        {/* <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6"> */}
+        <div className="flex flex-col items-center pt-8 lg:flex-row justify-between">
           {/* Left text */}
           <InView threshold={0.25}>
             {({ ref, inView}) => (
@@ -39,14 +40,14 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
                   visible: { x: 0, opacity: 1 },
                   hidden: { x: -100, opacity: 0 },
                 }}
-                className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+                className="pb-8 lg:pb-0 flex flex-col justify-center items-start row-start-2 sm:row-start-1">
                 <h1 className="font-bold text-3xl lg:text-4xl xl:text-5xl text-black leading-normal">
                   {content.title}
                 </h1>
                 <h3 className="text-black text-xl mt-4 mb-6">
                   {content.subtitle}
                 </h3>
-                <Link href={content.call_to_action.target_link}>
+                <Link href={content.call_to_action.target_link} className='self-center lg:self-start'>
                   <div className='text-mainCTA-text bg-mainCTA-normal p-4 rounded-xl hover:bg-mainCTA-hover transition text-md font-semibold'>{content.call_to_action.text}</div>
                 </Link>
               </motion.div>
@@ -54,7 +55,7 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
             </InView>
 
           {/* Right image */}
-          <div className="flex w-full">
+          <div className="flex">
           <InView threshold={0.25}>
               {({ ref, inView}) => (
               <motion.div
