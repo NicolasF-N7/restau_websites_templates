@@ -49,7 +49,7 @@ function Footer({ businessInfo, navigationInfo } : {businessInfo: Business, navi
         <div className="flex flex-col items-center justify-center ">
           
           <div className="mt-2 text-xs ">
-            Fait par Projet Z. Tout droits réservés
+            Fait par Zébulon. Tout droits réservés
           </div>
         </div>
       </div>
