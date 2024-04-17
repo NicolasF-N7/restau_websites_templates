@@ -31,7 +31,7 @@ export const business_data = {
                 "subtitle": "Découvrez un savoir-faire décénal.",
                 "call_to_action": {
                     "text": "Découvrir le menu",
-                    "target_link": "menu/menu.pdf"
+                    "target_link": "https://www.thong-minh-market.fr/"
                 },
                 "info": [
                     {
