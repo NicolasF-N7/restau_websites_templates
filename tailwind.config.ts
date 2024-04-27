@@ -36,7 +36,9 @@ const config: Config = {
         "footer-bg": '#1e212b',
         "navbar": '#984848',
         "textNavbar": '#eee',
-        "textMobileNavBarOpened": '#fff'
+        "textMobileNavBarOpened": '#fff',
+        "expandable": "#e1e1ea",
+        "expanded": "#f1f1fa"
       }
     },
   },

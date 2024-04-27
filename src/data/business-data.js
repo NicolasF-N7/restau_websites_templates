@@ -71,6 +71,10 @@ export const business_data = {
                     "target_link": "menu/menu.pdf"
                 },
             },
+            "menu_img": {
+                "title": "Découvrez notre menu en image",
+
+            },
             "location": {
                 "title": "Venez nous voir !",
                 "position": {

@@ -31,6 +31,7 @@ type Sections = {
   story: StorySection;
   gallery: GallerySection;
   menu: MenuSection;
+  menu_img: MenuImgSection;
   location: LocationSection;
   opening_time: OpeningTimeList;
   useful_info: UsefulInfoSection;
@@ -109,7 +110,12 @@ export type GallerySection = {
   title: string;
 };
 
-export type MenuSection = {
+export type MenuImgSectionMenuSection = {
   title: string;
   call_to_action: CallToAction;
 };
+
+export type MenuImgSection = {
+  title: string;
+};
+
