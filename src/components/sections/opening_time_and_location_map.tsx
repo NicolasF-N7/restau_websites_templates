@@ -27,7 +27,7 @@ const OpeningTimeAndLocationMap = ({ businessInfo, locationContent, openingTimeC
           {openingTimeContent.title}
         </h2>
           <div className="flex items-center justify-center px-4">
-            <InView threshold={0.25}>
+            <InView threshold={0.15} triggerOnce>
               {/* ref refers to the root element which triggers the inview event */}
               {({ ref, inView}) => (
               <table ref={ref} className="mt-4">

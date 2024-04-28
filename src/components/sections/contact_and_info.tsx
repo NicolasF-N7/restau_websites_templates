@@ -22,7 +22,7 @@ const ContactAndInfo = ({ contactContent, usefulInformationContent } : {contactC
           <div className='flex flex-col items-center mb-16'>
             <h2 className="font-bold text-3xl mb-8">{contactContent.title}</h2>
             
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce>
           {({ ref, inView}) => (
           
             <div className="flex flex-col justify-center space-y-8 w-full lg:flex-row lg:space-x-8 lg:space-y-0">

@@ -29,7 +29,7 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
         {/* <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6"> */}
         <div className="flex flex-col items-center pt-8 lg:flex-row justify-between">
           {/* Left text */}
-          <InView threshold={0.25}>
+          <InView threshold={0.25} triggerOnce>
             {({ ref, inView}) => (
               <motion.div 
                 ref={ref}
@@ -56,7 +56,7 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
 
           {/* Right image */}
           <div className="flex">
-          <InView threshold={0.25}>
+          <InView threshold={0.25} triggerOnce>
               {({ ref, inView}) => (
               <motion.div
                 ref={ref}
@@ -87,7 +87,7 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
         <div className="rounded-lg w-full grid grid-flow-row sm:grid-flow-row grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-gray-100 bg-white-500 z-10">
           {/* Info list */}
           {content.info.map((info, index) => (
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce>
               {({ ref, inView}) => (
                 <motion.div
                   ref={ref}

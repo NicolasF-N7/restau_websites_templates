@@ -14,7 +14,7 @@ const Gallery = ({ content } : {content: GallerySection}) => (
         <div className="flex flex-row">
             {/* First col of image */}
             <div className='flex flex-col'>
-                <InView threshold={0.15}>
+                <InView threshold={0.15} triggerOnce>
                     {({ ref, inView}) => (
                     <motion.div 
                         ref={ref}
@@ -37,7 +37,7 @@ const Gallery = ({ content } : {content: GallerySection}) => (
                     )}
                 </InView>
 
-                <InView threshold={0.15}>
+                <InView threshold={0.15} triggerOnce>
                     {({ ref, inView}) => (
                     <motion.div 
                         ref={ref}
@@ -63,7 +63,7 @@ const Gallery = ({ content } : {content: GallerySection}) => (
             
             {/* Second high image */}
             <div className='flex flex-col justify-center'>
-                <InView threshold={0.15}>
+                <InView threshold={0.15} triggerOnce>
                     {({ ref, inView}) => (
                     <motion.div 
                         ref={ref}
@@ -93,7 +93,7 @@ const Gallery = ({ content } : {content: GallerySection}) => (
         <div className="flex flex-row">
            {/* First col of image */}
            <div className='flex flex-col lg:order-1 order-2'>
-                <InView threshold={0.15}>
+                <InView threshold={0.15} triggerOnce>
                     {({ ref, inView}) => (
                     <motion.div 
                         ref={ref}
@@ -116,7 +116,7 @@ const Gallery = ({ content } : {content: GallerySection}) => (
                     )}
                 </InView>
 
-                <InView threshold={0.15}>
+                <InView threshold={0.15} triggerOnce>
                     {({ ref, inView}) => (
                     <motion.div 
                         ref={ref}
@@ -142,7 +142,7 @@ const Gallery = ({ content } : {content: GallerySection}) => (
             
             {/* Second high image */}
             <div className='flex flex-col justify-center order-1 lg:order-2'>
-                <InView threshold={0.15}>
+                <InView threshold={0.15} triggerOnce>
                     {({ ref, inView}) => (
                     <motion.div 
                         ref={ref}

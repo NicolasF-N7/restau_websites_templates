@@ -10,7 +10,7 @@ const Story = ({ content } : {content: StorySection}) => (
       <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
           
             {/* Image for desktop */}
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce>
             {({ ref, inView}) => (
               <motion.div 
                 ref={ref}
@@ -34,7 +34,7 @@ const Story = ({ content } : {content: StorySection}) => (
 
           <div className="text-gray-900 sm:text-lg">
             {/* Story Headline */}
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce>
               {({ ref, inView}) => (
                 <motion.div 
                 ref={ref}
@@ -51,7 +51,7 @@ const Story = ({ content } : {content: StorySection}) => (
             </InView>
             
             {/* Story paragraph */}
-            <InView threshold={0.25}>
+            <InView threshold={0.25} triggerOnce>
               {({ ref, inView}) => (
                 <motion.div 
                   ref={ref}
@@ -68,7 +68,7 @@ const Story = ({ content } : {content: StorySection}) => (
             </InView>
 
             {/* Image mobile */}
-            <InView threshold={0.05}>
+            <InView threshold={0.05} triggerOnce>
             {({ ref, inView}) => (
               <motion.div
                 ref={ref}
@@ -92,7 +92,7 @@ const Story = ({ content } : {content: StorySection}) => (
             
             {/* Bullet points - Milestones */}
             <div>
-              <InView threshold={0.5}>
+              <InView threshold={0.5} triggerOnce>
                 {({ ref, inView}) => (
                   <ul ref={ref} role="list" className="pt-8 space-y-5 border-t border-gray-300 my-7">
                     {content.milestones.map((milestoneText, index) => (
