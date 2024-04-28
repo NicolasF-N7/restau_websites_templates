@@ -117,5 +117,16 @@ export type MenuImgSectionMenuSection = {
 
 export type MenuImgSection = {
   title: string;
+  expandable_menu_items: ExpandableItem[];
 };
 
+export type ExpandableItem = {
+  title: string;
+  dishes: Dish[];
+}
+
+type Dish = {
+  name: string;
+  description: string;
+  image: string;
+}

@@ -73,7 +73,46 @@ export const business_data = {
             },
             "menu_img": {
                 "title": "Découvrez notre menu en image",
-
+                "expandable_menu_items": [
+                    {
+                        "title": "Burger poulet",
+                        "dishes": [
+                            {
+                                "name": "Burger fermier",
+                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
+                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tacos",
+                        "dishes": [
+                            {
+                                "name": "Tacos roquefort",
+                                "description": "Roquefort d'occitanie.",
+                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                            },{
+                                "name": "Vegan tacos",
+                                "description": "Steak de sauterelles.",
+                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Salades",
+                        "dishes": [
+                            {
+                                "name": "Salade césar",
+                                "description": "bluh bluh bluh",
+                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                            },{
+                                "name": "Salade romaine",
+                                "description": "Rom romaine",
+                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                            },
+                        ]
+                    },
+                ]
             },
             "location": {
                 "title": "Venez nous voir !",
