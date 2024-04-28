@@ -79,8 +79,9 @@ export const business_data = {
                         "dishes": [
                             {
                                 "name": "Burger fermier",
+                                "price": 18,
                                 "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
-                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             }
                         ]
                     },
@@ -89,12 +90,13 @@ export const business_data = {
                         "dishes": [
                             {
                                 "name": "Tacos roquefort",
+                                "price": 9,
                                 "description": "Roquefort d'occitanie.",
-                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },{
                                 "name": "Vegan tacos",
                                 "description": "Steak de sauterelles.",
-                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
                         ]
                     },
@@ -104,11 +106,11 @@ export const business_data = {
                             {
                                 "name": "Salade césar",
                                 "description": "bluh bluh bluh",
-                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },{
                                 "name": "Salade romaine",
                                 "description": "Rom romaine",
-                                "image": "/menu-img/dishes/burger-poulet-fermier.png"
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
                         ]
                     },

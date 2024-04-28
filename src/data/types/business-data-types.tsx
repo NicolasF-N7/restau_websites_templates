@@ -110,7 +110,7 @@ export type GallerySection = {
   title: string;
 };
 
-export type MenuImgSectionMenuSection = {
+export type MenuSection = {
   title: string;
   call_to_action: CallToAction;
 };
@@ -127,6 +127,7 @@ export type ExpandableItem = {
 
 type Dish = {
   name: string;
-  description: string;
-  image: string;
+  price?: number;
+  description?: string;
+  image?: string;
 }
