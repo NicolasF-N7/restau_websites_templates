@@ -23,6 +23,10 @@ const config: Config = {
         'zomp': '#619B8A',
 
         'mobile-menu-bg': '#1e212b',
+        'hero': {
+          "title": "#000",
+          "subtitle": "#000",
+        },
         'mainCTA': {
           "normal": '#FE7F1D',
           "hover": '#f76201',

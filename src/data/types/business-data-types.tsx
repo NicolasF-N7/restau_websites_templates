@@ -47,6 +47,7 @@ export type Navigation = {
 export type HeroSection = {
   title: string;
   subtitle: string;
+  image: string;
   call_to_action: CallToAction;
   info: InfoHero[];
 };
@@ -68,6 +69,7 @@ type CallToAction = {
 export type StorySection = {
   title: string;
   subtitle: string;
+  image_src: string;
   milestones: string[];
   lastParagraph: string;
 };

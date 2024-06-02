@@ -24,7 +24,7 @@ const Story = ({ content } : {content: StorySection}) => (
                 className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
                 <Image
                   className="shadow-lg hidden lg:flex w-full mb-4 rounded-lg lg:mb-0" 
-                  src="/salad-beef-plate.png"
+                  src={content.image_src}
                   width={500}
                   height={500}
                   alt="Business story image"/>
@@ -82,7 +82,7 @@ const Story = ({ content } : {content: StorySection}) => (
                 className="flex flex-col items-center">
                 <Image
                   className="shadow-lg lg:hidden flex w-[90%] mb-4 lg:mb-0 rounded-lg" 
-                  src="/salad-beef-plate.png"
+                  src={content.image_src}
                   width={500}
                   height={500}
                   alt=""/>

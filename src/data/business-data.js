@@ -28,7 +28,8 @@ export const business_data = {
         "sections": {
             "hero": {
                 "title": "Le burger Toulousain",
-                "subtitle": "Découvrez un savoir-faire décénal.",
+                "subtitle": "10 ans de savoir-faire",
+                "image": "/gallery-11-dim.jpg",
                 "call_to_action": {
                     "text": "Découvrir le menu",
                     "target_link": "https://www.thong-minh-market.fr/"
@@ -36,8 +37,8 @@ export const business_data = {
                 "info": [
                     {
                         "icon": "info-star.svg",
-                        "title": "4.6 / 5",
-                        "subtitle": "Sur 1200 avis"
+                        "title": "4.0 / 5",
+                        "subtitle": "Sur 1300 avis"
                     },
                     {
                         "icon": "/info-calendar.svg",
@@ -53,6 +54,7 @@ export const business_data = {
             "story": {
                 "title": "Notre histoire",
                 "subtitle": "Le premier Toulouse'hein à été ouvert en 2008 sur la place du capitole. À l'époque ce concept novateur a beaucoup fait parlé de lui car l'image du burger été encore associé à un repas de mauvaise qualité. Cette réputation venait des chaines de restaurants américaines venu s'implanter en France sans considération de la complexité de la culture française, et en portant peu attention au rapport que les français ont avec la nourriture. C'est pourquoi nous avons créer ce concept de burger fais maison avec des ingrédients de qualité.",
+                "image_src": "/gallery-7.jpeg",
                 "milestones": [
                     "2008 - Premier restaurant ouvert au Capitole",
                     "2009 - Recommandé dans plus de 15 articles de presse culinaire",
