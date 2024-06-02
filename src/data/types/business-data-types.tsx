@@ -31,7 +31,8 @@ type Sections = {
   story: StorySection;
   gallery: GallerySection;
   menu: MenuSection;
-  menu_img: MenuImgSection;
+  menu_img: IntegratedMenuSection;
+  menu_text: IntegratedMenuSection;
   location: LocationSection;
   opening_time: OpeningTimeList;
   useful_info: UsefulInfoSection;
@@ -117,12 +118,13 @@ export type MenuSection = {
   call_to_action: CallToAction;
 };
 
-export type MenuImgSection = {
-  title: string;
-  expandable_menu_items: ExpandableItem[];
-};
 
-export type ExpandableItem = {
+export type IntegratedMenuSection = {
+  title: string;
+  categories: MenuCategory[];
+}
+
+export type MenuCategory = {
   title: string;
   dishes: Dish[];
 }

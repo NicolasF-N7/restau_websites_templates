@@ -73,9 +73,9 @@ export const business_data = {
                     "target_link": "menu/menu.pdf"
                 },
             },
-            "menu_img": {
-                "title": "Découvrez notre menu en image",
-                "expandable_menu_items": [
+            "menu_text": {
+                "title": "Découvrez notre menu",
+                "categories": [
                     {
                         "title": "Entrées / Tapas",
                         "dishes": [
@@ -83,10 +83,10 @@ export const business_data = {
                                 "name": "Burger fermier",
                                 "price": 18,
                                 "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                                "image": "/menu/dishes/starter.png"
                             },{
                                 "name": "Le Blako",
-                                "price": 18,
+                                "price": 18.90,
                                 "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
@@ -112,11 +112,13 @@ export const business_data = {
                         "dishes": [
                             {
                                 "name": "Salade césar",
-                                "description": "bluh bluh bluh",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                                "price": 9,
+                                "description": "Laitue, pignons de pin, comcombres frais",
+                                "image": "/menu/dishes/salad-beef-plate.png"
                             },{
                                 "name": "Salade romaine",
-                                "description": "Rom romaine",
+                                "price": 11,
+                                "description": "Laitue, tomates séchés, fromage de chèvre",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
                         ]
@@ -124,12 +126,14 @@ export const business_data = {
                         "title": "Hot Dogs",
                         "dishes": [
                             {
-                                "name": "Salade césar",
-                                "description": "bluh bluh bluh",
+                                "name": "Le local",
+                                "price": 14,
+                                "description": "Véritable saucisse de Toulouse",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },{
-                                "name": "Salade romaine",
-                                "description": "Rom romaine",
+                                "name": "Le canadair",
+                                "price": 17,
+                                "description": "Saussice au canard du gers",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
                         ]
@@ -139,11 +143,12 @@ export const business_data = {
                         "dishes": [
                             {
                                 "name": "Tacos roquefort",
-                                "price": 9,
+                                "price": 11,
                                 "description": "Roquefort d'occitanie.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },{
                                 "name": "Vegan tacos",
+                                "price": 15.50,
                                 "description": "Steak de sauterelles.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
