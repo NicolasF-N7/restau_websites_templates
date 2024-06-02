@@ -39,7 +39,7 @@ const config: Config = {
         },
         "footer-bg": '#1e212b',
         "navbar": '#984848',
-        "textNavbar": '#eee',
+        "textNavbar": '#111',
         "textMobileNavBarOpened": '#fff',
         "expandable": "#e1e1ea",
         "expanded": "#f1f1fa"

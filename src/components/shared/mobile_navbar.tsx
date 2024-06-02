@@ -27,7 +27,7 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
   return (
     <nav>
       <div
-        className={`w-full justify-between flex items-center ${isMenuOpen && 'bg-mobile-menu-bg'} p-5`}
+        className={`w-full justify-between flex items-center ${isMenuOpen && 'bg-mobile-menu-bg'} p-5 pt-0`}
         style={{ zIndex: 101 }}>
 
         <li className="list-none font-bold text-lg">

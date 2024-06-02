@@ -29,7 +29,7 @@ export const business_data = {
             "hero": {
                 "title": "Le burger Toulousain",
                 "subtitle": "10 ans de savoir-faire",
-                "image": "/gallery-11-dim.jpg",
+                "image": "/gallery-11-dim-slim.jpg",
                 "call_to_action": {
                     "text": "Découvrir le menu",
                     "target_link": "https://www.thong-minh-market.fr/"
@@ -77,27 +77,32 @@ export const business_data = {
                 "title": "Découvrez notre menu en image",
                 "expandable_menu_items": [
                     {
-                        "title": "Burger poulet",
+                        "title": "Entrées / Tapas",
                         "dishes": [
                             {
                                 "name": "Burger fermier",
                                 "price": 18,
                                 "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
-                            }
+                            },{
+                                "name": "Le Blako",
+                                "price": 18,
+                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                            },
                         ]
-                    },
-                    {
-                        "title": "Tacos",
+                    },{
+                        "title": "Burgers",
                         "dishes": [
                             {
-                                "name": "Tacos roquefort",
-                                "price": 9,
-                                "description": "Roquefort d'occitanie.",
+                                "name": "Le patte d'oie",
+                                "price": 18,
+                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },{
-                                "name": "Vegan tacos",
-                                "description": "Steak de sauterelles.",
+                                "name": "Le Blako",
+                                "price": 18,
+                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
                         ]
@@ -112,6 +117,34 @@ export const business_data = {
                             },{
                                 "name": "Salade romaine",
                                 "description": "Rom romaine",
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                            },
+                        ]
+                    }, {
+                        "title": "Hot Dogs",
+                        "dishes": [
+                            {
+                                "name": "Salade césar",
+                                "description": "bluh bluh bluh",
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                            },{
+                                "name": "Salade romaine",
+                                "description": "Rom romaine",
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Tacos",
+                        "dishes": [
+                            {
+                                "name": "Tacos roquefort",
+                                "price": 9,
+                                "description": "Roquefort d'occitanie.",
+                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                            },{
+                                "name": "Vegan tacos",
+                                "description": "Steak de sauterelles.",
                                 "image": "/menu/dishes/burger-poulet-fermier.jpg"
                             },
                         ]
