@@ -19,7 +19,7 @@ const ExpandableSection = ({title, children}: {title: string, children: JSX.Elem
 
   return (
       <>
-        <div className="bg-pumpkin rounded-lg">
+        <div className="">
           
            <motion.div className={`flex-col rounded-xl p-2 w-full
               transition-colors duration-200 ease-in-out ${isExpanded ? 'bg-expanded' : 'hover:bg-expanded bg-expandable'}`}
@@ -36,7 +36,7 @@ const ExpandableSection = ({title, children}: {title: string, children: JSX.Elem
                   transition={{ type: 'spring', stiffness: 200, damping: 15 }}
                   className="text-charcoal text-xl font-bold">
                     
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                   </svg>
                 </motion.div>

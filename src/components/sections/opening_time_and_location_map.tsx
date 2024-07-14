@@ -17,7 +17,7 @@ const render = (status: Status): ReactElement => {
 };
 
 const OpeningTimeAndLocationMap = ({ businessInfo, locationContent, openingTimeContent } : {businessInfo: Business, locationContent: LocationSection, openingTimeContent: OpeningTimeList}) => (
-  <div  className="overflow-hidden max-w-screen-xl px-4 py-0 mx-auto">
+  <div  className="overflow-hidden max-w-screen-xl px-4 py-12 lg:py-20 lg:py-24 mx-auto">
     
     <div className='flex flex-col xl:flex-row'>
       {/* Opening time */}
@@ -55,7 +55,7 @@ const OpeningTimeAndLocationMap = ({ businessInfo, locationContent, openingTimeC
       </div>
       
       {/* Gmaps */}
-      <div id="acces" className='mt-16 xl:mt-0 xl:grow'>
+      <div id="acces" className='mt-8 xl:mt-0 pt-24 xl:pt-0 xl:grow'>
         {/* Title */}
         <h2 className="mb-4 font-bold text-3xl text-center">{locationContent.title}</h2>
         <div className="flex items-center justify-center" >

@@ -23,10 +23,6 @@ const config: Config = {
         'zomp': '#619B8A',
 
         'mobile-menu-bg': '#1e212b',
-        'hero': {
-          "title": "#000",
-          "subtitle": "#000",
-        },
         'mainCTA': {
           "normal": '#FE7F1D',
           "hover": '#f76201',
@@ -38,8 +34,8 @@ const config: Config = {
           "text": "#000",
         },
         "footer-bg": '#1e212b',
-        "navbar": '#984848',
-        "textNavbar": '#111',
+        "navbar": '#79BF29',
+        "textNavbar": '#eee',
         "textMobileNavBarOpened": '#fff',
         "expandable": "#e1e1ea",
         "expanded": "#f1f1fa"

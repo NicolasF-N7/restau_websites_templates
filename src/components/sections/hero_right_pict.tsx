@@ -69,8 +69,8 @@ const HeroPictSide = ({ content }: {content: HeroSection}) => {
                 }}
                 className="h-full w-full">
                 <Image
-                  src={content.image}
-                  alt="Hero image"
+                  src="/burgeeer.webp"
+                  alt="Gros burger"
                   quality={100}
                   width={612}
                   height={383}

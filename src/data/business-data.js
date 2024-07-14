@@ -2,8 +2,8 @@ import { BusinessDataType } from "@/data/types/business-data-types";
 
 export const business_data = {
     "business": {
-        "name": "Les Toulous'hein",
-        "headline": "Toulouse'hein - La meilleure fabrique de burger de Toulouse",
+        "name": "Bougnat Burger",
+        "headline": "Bougnat Burger - La meilleure fabrique de burger de Toulouse",
         "website_url": "https://toulouse-hein.fr/",
         "website_thumbnail_url": "https://tb-static.uber.com/prod/image-proc/processed_images/fe52ccaabc3b616079fb5810a83e704e/16bb0a3ab8ea98cfe8906135767f7bf4.jpeg",
         "social_media": [
@@ -22,27 +22,27 @@ export const business_data = {
                 "Accueil",
                 "Menu",
                 "Horaires",
-                "Accès"
+                "Contact",
+                "Livraison"
             ]
         },
         "sections": {
             "hero": {
-                "title": "Le burger Toulousain",
-                "subtitle": "10 ans de savoir-faire",
-                "image": "/gallery-11-dim-slim.jpg",
+                "title": "Le burger Auvergnat",
+                "subtitle": "Dee vrais burgers du terroir Auvergnat.",
                 "call_to_action": {
                     "text": "Découvrir le menu",
-                    "target_link": "https://www.thong-minh-market.fr/"
+                    "target_link": "/menu"
                 },
                 "info": [
                     {
                         "icon": "info-star.svg",
-                        "title": "4.0 / 5",
-                        "subtitle": "Sur 1300 avis"
+                        "title": "4.6 / 5",
+                        "subtitle": "Sur 1200 avis"
                     },
                     {
                         "icon": "/info-calendar.svg",
-                        "title": "15 ans",
+                        "title": "13 ans",
                         "subtitle": "D'existence"
                     },{
                         "icon": "/info-flag.png",
@@ -53,104 +53,265 @@ export const business_data = {
             },
             "story": {
                 "title": "Notre histoire",
-                "subtitle": "Le premier Toulouse'hein à été ouvert en 2008 sur la place du capitole. À l'époque ce concept novateur a beaucoup fait parlé de lui car l'image du burger été encore associé à un repas de mauvaise qualité. Cette réputation venait des chaines de restaurants américaines venu s'implanter en France sans considération de la complexité de la culture française, et en portant peu attention au rapport que les français ont avec la nourriture. C'est pourquoi nous avons créer ce concept de burger fais maison avec des ingrédients de qualité.",
-                "image_src": "/gallery-7.jpeg",
+                "subtitle": "Le Bougnat Burger propose depuis le 02 février 2012 des Burgers Maison accompagnés de Frites Maison et de Salade, confectionnés avec un maximum de produits locaux et régionaux. A consommer sur place, à emporter, en livraison. <br/><br/>Le Saint Nectaire AOP, le Bleu d’Auvergne AOP, le Cantal Salers AOP, le Cantal Jeune AOP, le Carré d'Aurillac AOP, le Jambon d'Auvergne IGP, les Steaks Hachés Façon Bouchère VBF et le Pain Burger Artisanal sont ainsi la base principale des burgers. <br/><br/>Le Bougnat Burger vous invite à découvrir ses Grillades Bio, sa Bavette Bio, mais aussi ses Salades et ses Wraps accompagnés de Frites Maison et de Salade et Mesclun Maison.",
                 "milestones": [
-                    "2008 - Premier restaurant ouvert au Capitole",
-                    "2009 - Recommandé dans plus de 15 articles de presse culinaire",
-                    "2010 - Première queue de plus de 50 personnes pour notre restaurant",
-                    "2012 - Ouverture du second Toulouse'Hein aux Minimes",
+                    "2012 - Ouverture du Bougnat",
                 ],
-                "lastParagraph": "Venez goûter le gout de l'authentique"
+                "lastParagraph": "Slogan du Bougnat ?"
             },
             "gallery": {
-                "title": "Découvrez nos meilleurs plats"
-            },
-            "menu": {
-                "title": "Découvrez notre menu",
+                "title": "Découvrez nos meilleurs plats",
                 "call_to_action": {
                     "text": "Menu",
-                    "target_link": "menu/menu.pdf"
+                    "target_link": "/menu"
                 },
             },
-            "menu_text": {
-                "title": "Découvrez notre menu",
-                "categories": [
+            "menu_img": {
+                "title": "Découvrez notre menu en image",
+                "expandable_menu_items": [
                     {
-                        "title": "Entrées / Tapas",
+                        "title": "Burgers simples",
                         "dishes": [
                             {
-                                "name": "Burger fermier",
-                                "price": 18,
-                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
-                                "image": "/menu/dishes/starter.png"
+                                "name": "Lo Ti Mefia Te",
+                                "price": 16.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Bleu d'Auvergne AOP, Cantal Jeune AOP, Jambon Sec, Tomates, Pomme Paillasson, Noix, Salade et Son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                                "image": "/menu/dishes/Ti Mefia te.webp"
                             },{
-                                "name": "Le Blako",
+                                "name": "Lo Ti Bougnat",
+                                "price": 15.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Jambon Sec, Pomme Paillasson, Salade et son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                                "image": "/menu/dishes/Ti bougnat.webp"
+                            },{
+                                "name": "Lo Ti Gourmand",
+                                "price": 16.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Bleu d'Auvergne AOP, Jambon Sec, Pomme Paillasson, Noix, Salade et son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                                "image": "/menu/dishes/Ti gourmand.webp"
+                            },{
+                                "name": "Lo Ti Vulcano",
+                                "price": 15.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Cantal Jeune AOP, Poivrons, Chorizo, Pomme Paillasson, Salade et Son Mesclun Maison, Sauce Chili.",
+                                "image": "/menu/dishes/Ti vulcano.webp"
+                            },{
+                                "name": "Lo Ti Blue",
+                                "price": 15.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Bleu d'Auvergne AOP, Cantal Jeune AOP, Pomme Paillasson, Noix, Salade et Son Mesclun Maison, Sauce au Bleu d'Auvergne AOP.",
+                                "image": "/menu/dishes/Ti blue.webp"
+                            },{
+                                "name": "Lo Ti Rillac",
+                                "price": 15.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Carré d'Aurillac AOP, Pomme Paillasson, Noix, Salade et Son Mesclun Maison, Sauce au Bleu d'Auvergne AOP.",
+                                "image": "/menu/dishes/Ti rillac.webp"
+                            },{
+                                "name": "Lo Ti Salers",
+                                "price": 16.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Cantal Salers AOP, Jambon Sec, Pomme Paillasson, Salade et Son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                                "image": "/menu/dishes/Ti salers.webp"
+                            },{
+                                "name": "Lo Ti Cabri",
+                                "price": 16.90,
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Fromage de Chèvre Moulé à la Louche, Jambon Sec, Miel, Salade et Son Mesclun Maison, Sauce Crème Ciboulette.",
+                                "image": "/menu/dishes/Ti cabri.webp"
+                            },{
+                                "name": "Lo Ti Vegetario",
+                                "price": 14.90,
+                                "description": "Pain Burger Artisanal, Galette de Pommes de Terre, Cantal Jeune AOP, Poivrons, Tomates, Salade et Son Mesclun Maison, Sauce Crème Ciboulette.",
+                                "image": "/menu/dishes/Ti vegetario.webp"
+                            },{
+                                "name": "Lo Ti Mefiano",
                                 "price": 18.90,
-                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
-                            },
+                                "description": "Pain Burger Artisanal, Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Bleu d'Auvergne AOP, Cantal Jeune AOP, Fromage de Chèvre Moulé à la Louche, Jambon Sec, Chorizo, Tomates, Pomme Paillasson, Poivrons, Tomates, Noix, Salade et Son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                                "image": "/menu/dishes/Ti mefiano.webp"
+                            }
                         ]
-                    },{
-                        "title": "Burgers",
+                    },
+                    {
+                        "title": "Burgers doubles",
                         "dishes": [
-                            {
-                                "name": "Le patte d'oie",
-                                "price": 18,
-                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
-                            },{
-                                "name": "Le Blako",
-                                "price": 18,
-                                "description": "Poulet fermier AOC Côtes du rhône. Salade label rouge.",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
-                            },
+                          {
+                              "name": "Lo Mefia Te",
+                              "price": 18.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Bleu d'Auvergne AOP, Cantal Jeune AOP, Jambon Sec, Tomates, Pomme Paillasson, Noix, Salade et Son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                              "image": "/menu/dishes/Mefia te.webp"
+                          },{
+                              "name": "Lo Bougnat",
+                              "price": 17.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Jambon Sec, Pomme Paillasson, Salade et son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                              "image": "/menu/dishes/Bougnat.webp"
+                          },{
+                              "name": "Lo Gourmand",
+                              "price": 18.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Bleu d'Auvergne AOP, Jambon Sec, Pomme Paillasson, Noix, Salade et son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                              "image": "/menu/dishes/Gourmand.webp"
+                          },{
+                              "name": "Lo Vulcano",
+                              "price": 17.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Cantal Jeune AOP, Poivrons, Chorizo, Pomme Paillasson, Salade et Son Mesclun Maison, Sauce Chili.",
+                              "image": "/menu/dishes/Vulcano.webp"
+                          },{
+                              "name": "Lo Blue",
+                              "price": 17.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Bleu d'Auvergne AOP, Cantal Jeune AOP, Pomme Paillasson, Noix, Salade et Son Mesclun Maison, Sauce au Bleu d'Auvergne AOP.",
+                              "image": "/menu/dishes/Blue.webp"
+                          },{
+                              "name": "Lo Rillac",
+                              "price": 17.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Carré d'Aurillac AOP, Pomme Paillasson, Noix, Salade et Son Mesclun Maison, Sauce au Bleu d'Auvergne AOP.",
+                              "image": "/menu/dishes/Rillac.webp"
+                          },{
+                              "name": "Lo Salers",
+                              "price": 18.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Cantal Salers AOP, Jambon Sec, Pomme Paillasson, Salade et Son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                              "image": "/menu/dishes/Salers.webp"
+                          },{
+                              "name": "Lo Cabri",
+                              "price": 18.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Fromage de Chèvre Moulé à la Louche, Jambon Sec, Miel, Salade et Son Mesclun Maison, Sauce Crème Ciboulette.",
+                              "image": "/menu/dishes/Cabri.webp"
+                          },{
+                              "name": "Lo Vegetario",
+                              "price": 16.90,
+                              "description": "Pain Burger Artisanal, Double Galette de Pommes de Terre, Cantal Jeune AOP, Poivrons, Tomates, Salade et Son Mesclun Maison, Sauce Crème Ciboulette.",
+                              "image": "/menu/dishes/Vegetario.webp"
+                          },{
+                              "name": "Lo Mefiano",
+                              "price": 20.90,
+                              "description": "Pain Burger Artisanal, Double Steak Haché Facon Bouchère VBF ou Galette de Pommes de Terre, Saint Nectaire Fermier AOP, Bleu d'Auvergne AOP, Cantal Jeune AOP, Fromage de Chèvre Moulé à la Louche, Jambon Sec, Chorizo, Tomates, Pomme Paillasson, Poivrons, Tomates, Noix, Salade et Son Mesclun Maison, Sauce au Saint Nectaire Fermier AOP.",
+                              "image": "/menu/dishes/Mefiano.webp"
+                          }
                         ]
                     },
                     {
                         "title": "Salades",
                         "dishes": [
                             {
-                                "name": "Salade césar",
-                                "price": 9,
-                                "description": "Laitue, pignons de pin, comcombres frais",
-                                "image": "/menu/dishes/salad-beef-plate.png"
+                                "name": "Allier",
+                                "price": 14.90,
+                                "description": "Salade Faite Maison et son Mesclun, Saumon Fumé en Auvergne, Bleu d'Auvergne AOP, Cantal Jeune AOP, Tomates Cerises.",
+                                "image": "/menu/dishes/Allier.webp"
                             },{
-                                "name": "Salade romaine",
-                                "price": 11,
-                                "description": "Laitue, tomates séchés, fromage de chèvre",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
-                            },
-                        ]
-                    }, {
-                        "title": "Hot Dogs",
-                        "dishes": [
-                            {
-                                "name": "Le local",
-                                "price": 14,
-                                "description": "Véritable saucisse de Toulouse",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                                "name": "Chèvre chaud",
+                                "price": 14.90,
+                                "description": "Salade Faite Maison et son Mesclun, Toasts Chauds de Fromage de Chèvre Moulé à la louche, Miel, Jambon d'Auvergne IGP, Pignons de Pin, Herbes de Provence, Tomates Cerises.",
+                                "image": "/menu/dishes/Chevre chaud.webp"
                             },{
-                                "name": "Le canadair",
-                                "price": 17,
-                                "description": "Saussice au canard du gers",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                                "name": "Vercingétorix VS César",
+                                "price": 14.90,
+                                "description": "Salade Faite Maison et son Mesclun, Cantal Jeune AOP, Blanc de Poulet, Poivrons, Croûtons à l'Huile d'Olive, Tomates Cerises.",
+                                "image": "/menu/dishes/Vercingetorix vs cesar.webp"
+                            },{
+                                "name": "Auvergnate",
+                                "price": 14.90,
+                                "description": "Salade Faite Maison et son Mesclun, Jambon d'Auvergne IGP , Bleu d'Auvergne AOP, Cantal Jeune AOP, Noix, Tomates Cerises.",
+                                "image": "/menu/dishes/Auvergnate.webp"
+                            },{
+                                "name": "Sancy",
+                                "price": 14.90,
+                                "description": "Salade Faite Maison et son Mesclun, Toasts Chauds de Saint Nectaire Fermier AOP, Toasts Chauds de Bleu d'Auvergne AOP, Cantal Jeune AOP, Jambon d'Auvergne IGP, Tomates Cerises.",
+                                "image": "/menu/dishes/Sancy.webp"
                             },
                         ]
                     },
                     {
-                        "title": "Tacos",
+                        "title": "Viandes",
                         "dishes": [
                             {
-                                "name": "Tacos roquefort",
-                                "price": 11,
-                                "description": "Roquefort d'occitanie.",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                                "name": "Bavette Charolais Bio",
+                                "price": 17.90,
+                                "description": "Bavette Aloyau Race Charolais. Viande Issue De l'Agriculture Biologique. 300 grammes",
+                                "image": "/menu/dishes/Bavette.webp"
                             },{
-                                "name": "Vegan tacos",
-                                "price": 15.50,
-                                "description": "Steak de sauterelles.",
-                                "image": "/menu/dishes/burger-poulet-fermier.jpg"
+                                "name": "Steak Haché",
+                                "price": 14.99,
+                                "description": "STEAK HACHE FACON BOUCHERE VBF",
+                                "image": "/menu/dishes/Steak haché.webp"
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Wraps",
+                        "dishes": [
+                            {
+                                "name": "Saumon",
+                                "price": 14.90,
+                                "description": "Galette de blé, Saumon Fumé en Auvergne, Tomates, Salade Faite Maison et son Mesclun, Sauce à l'aneth.",
+                                "image": "/menu/dishes/Saumon.webp"
+                            },{
+                                "name": "Chèvre",
+                                "price": 14.90,
+                                "description": "Galette de blé, Fromage de Chèvre Moulé à la Louche, Miel, Jambon d'Auvergne IGP, Tomates, Salade Faite Maison et son Mesclun, Sauce Crème Ciboulette.",
+                                "image": "/menu/dishes/Chèvre.webp"
+                            },{
+                                "name": "Poulet",
+                                "price": 14.90,
+                                "description": "Galette de blé, Blanc de Poulet, Tomates, Poivrons, Salade Faite Maison et son Mesclun, Sauce Crème Curry. ",
+                                "image": "/menu/dishes/Poulet.webp"
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Desserts",
+                        "dishes": [
+                            {
+                                "name": "Moelleux coeur fondant",
+                                "price": 5.90,
+                                "description": "Gâteau au Chocolat, et son Cœur Fondant. Servi Tiède Avec de la Crème Anglaise.",
+                                "image": "/menu/dishes/Moelleux.webp"
+                            },{
+                                "name": "Nougat glacé",
+                                "price": 5.90,
+                                "description": "Base Crème Fraîche et Fruits Secs, Cubes d'Abricots et Raisins Secs ainsi que des Morceaux de Noisettes, Pistaches et Amandes.",
+                                "image": "/menu/dishes/Nougat glace.webp"
+                            },{
+                                "name": "Thé gourmand",
+                                "price": 7.90,
+                                "description": "Thé au choix parmi notre séletion et Mignardises.",
+                                "image": "/menu/dishes/The gourmand.webp"
+                            },{
+                                "name": "Café gourmand",
+                                "price": 6.90,
+                                "description": "Café et Mignardises.",
+                                "image": "/menu/dishes/Cafe gourmand.webp"
+                            },{
+                                "name": "Digeo gourmand",
+                                "price": 8.90,
+                                "description": "Digestif au choix parmi notre sélection accompagné de ses Mignardises.",
+                                "image": "/menu/dishes/Digeo gourmand.webp"
+                            },
+                        ]
+                    },{
+                        "title": "Desserts maison",
+                        "dishes": [
+                            {
+                                "name": "Framboisier",
+                                "price": 7.90,
+                                "description": "Génoise Nature, Mousse Bavaroise, Framboises, Amandes Hachées Torréfiées.",
+                                "image": "/menu/dishes/Framboisier.webp"
+                            },{
+                                "name": "Tiramisu Framboise",
+                                "price": 7.90,
+                                "description": "Brisures de Spéculoos, Appareil à Tiramisu, Brisures de Framboises.",
+                                "image": "/menu/dishes/Tiramisu framboise.webp"
+                            },{
+                                "name": "Forêt Noire",
+                                "price": 7.90,
+                                "description": "Génoise Chocolat, Crème Chantilly Maison, Copeaux de Chocolat au Lait, Sans Cerise, Sans Alcool.",
+                                "image": "/menu/dishes/Foret noire.webp"
+                            },{
+                                "name": "Mousse chocolat",
+                                "price": 7.90,
+                                "description": "Mousse Chocolat Noir Faite Maison Accompagnée de Copeaux de Chocolat au Lait.",
+                                "image": "/menu/dishes/Mousse au chocolat.webp"
+                            },{
+                                "name": "Tiramisu Café",
+                                "price": 7.90,
+                                "description": "Biscuits Cuillères Aromatisés au Café, Appareil à Tiramisu, et Poudre de Cacao.",
+                                "image": "/menu/dishes/Tiramisu café.webp"
+                            },{
+                                "name": "Citron meringué",
+                                "price": 7.90,
+                                "description": "Pâte Sucrée, Appareil Citron et Meringue.",
+                                "image": "/menu/dishes/Citron meringué.webp"
                             },
                         ]
                     },
@@ -212,7 +373,7 @@ export const business_data = {
                 "email": "touloushein@gmail.com"
             },
             "footer": {
-                
+
             }
         }
     }

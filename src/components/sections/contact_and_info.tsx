@@ -14,7 +14,7 @@ const ContactAndInfo = ({ contactContent, usefulInformationContent } : {contactC
     
     {/* Opening time */}
 
-    <div className="flex justify-center py-8">
+    <div className="flex justify-center py-12 lg:py-20 lg:py-24">
       <div className="flex flex-col w-full max-w-4xl px-4">
         <div className="flex flex-col lg:flex-row justify-between">
 

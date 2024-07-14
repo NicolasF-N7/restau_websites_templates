@@ -8,11 +8,11 @@ const Story = ({ content } : {content: StorySection}) => (
   <div id="story" className="overflow-hidden max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
       {/* Row */}
       <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-          
+
             {/* Image for desktop */}
             <InView threshold={0.25} triggerOnce>
             {({ ref, inView}) => (
-              <motion.div 
+              <motion.div
                 ref={ref}
                 initial={{ x: -100, opacity: 0 }}
                 animate={inView ? 'visible' : 'hidden'}
@@ -23,8 +23,8 @@ const Story = ({ content } : {content: StorySection}) => (
                 }}
                 className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
                 <Image
-                  className="shadow-lg hidden lg:flex w-full mb-4 rounded-lg lg:mb-0" 
-                  src={content.image_src}
+                  className="shadow-lg hidden lg:flex w-full mb-4 rounded-lg lg:mb-0"
+                  src="/salad-beef-plate.png"
                   width={500}
                   height={500}
                   alt="Business story image"/>
@@ -36,7 +36,7 @@ const Story = ({ content } : {content: StorySection}) => (
             {/* Story Headline */}
             <InView threshold={0.25} triggerOnce>
               {({ ref, inView}) => (
-                <motion.div 
+                <motion.div
                 ref={ref}
                 initial={{ x: 100, opacity: 0 }}
                 animate={inView ? 'visible' : 'hidden'}
@@ -49,11 +49,11 @@ const Story = ({ content } : {content: StorySection}) => (
                 </motion.div>
             )}
             </InView>
-            
+
             {/* Story paragraph */}
             <InView threshold={0.25} triggerOnce>
               {({ ref, inView}) => (
-                <motion.div 
+                <motion.div
                   ref={ref}
                   initial={{ x: 100, opacity: 0 }}
                   animate={inView ? 'visible' : 'hidden'}
@@ -62,7 +62,7 @@ const Story = ({ content } : {content: StorySection}) => (
                     visible: { x: 0, opacity: 1 },
                     hidden: { x: 100, opacity: 0 },
                   }}>
-                    <p className="mb-8 text-justify lg:mx-4 mx-8 font-light lg:text-xl">{content.subtitle}</p>
+                    <p className="mb-8 text-justify lg:mx-4 mx-8 font-light lg:text-xl" dangerouslySetInnerHTML={{ __html: content.subtitle }} />
                 </motion.div>
               )}
             </InView>
@@ -81,15 +81,15 @@ const Story = ({ content } : {content: StorySection}) => (
                 }}
                 className="flex flex-col items-center">
                 <Image
-                  className="shadow-lg lg:hidden flex w-[90%] mb-4 lg:mb-0 rounded-lg" 
-                  src={content.image_src}
+                  className="shadow-lg lg:hidden flex w-[90%] mb-4 lg:mb-0 rounded-lg"
+                  src="/salad-beef-plate.png"
                   width={500}
                   height={500}
                   alt=""/>
               </motion.div>
             )}
             </InView>
-            
+
             {/* Bullet points - Milestones */}
             <div>
               <InView threshold={0.5} triggerOnce>
@@ -98,7 +98,7 @@ const Story = ({ content } : {content: StorySection}) => (
                     {content.milestones.map((milestoneText, index) => (
                       <motion.li
                       className="flex space-x-3 lg:mx-0 mx-8"
-                      
+
                       initial={{ x: 100, opacity: 0 }}
                       animate={inView ? 'visible' : 'hidden'}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -115,10 +115,10 @@ const Story = ({ content } : {content: StorySection}) => (
                 )}
               </InView>
             </div>
-              
+
               <p className="font-light lg:text-xl">{content.lastParagraph}</p>
-              
-              
+
+
           </div>
       </div>
   </div>

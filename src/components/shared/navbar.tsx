@@ -8,10 +8,10 @@ function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: st
   return (
     <nav className="flex items-center justify-between">
       <li className="list-none font-bold text-lg">
-          <span className="white-shadow-sm text-textNavbar text-xl flex items-center">
+          <span className="text-textNavbar text-xl flex items-center">
             <img
               className="mr-2 scale-90 transform hover:scale-100 transition-transform duration-500"
-              src="/logo.png"
+              src="/logo.gif"
               width="80"/>
 
               <h2 className="hover:text-black transition-all duration-500 hover:duration-100">
@@ -22,7 +22,7 @@ function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: st
       <ul className="flex items-center space-x-10">
         {navigationInfo.menus.map((menu, index) => {
           const menuRoute = transformToSafeUrl(menu);
-          
+
           return (
             <li
               key={index}
@@ -31,14 +31,9 @@ function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: st
                   ? "opacity-100"
                   : "opacity-40 hover:opacity-100 transition-opacity"
               }`}>
-              <ScrollLink 
-                to={menuRoute}
-                smooth={true}
-                offset={-10} 
-                duration={200}
-                className="cursor-pointer font-bold white-shadow-sm">
-                  {menu}
-              </ScrollLink>
+                <Link href={menuRoute}>
+                {menu}
+                </Link>
             </li>
           );
         })}

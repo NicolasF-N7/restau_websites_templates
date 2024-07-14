@@ -31,8 +31,7 @@ type Sections = {
   story: StorySection;
   gallery: GallerySection;
   menu: MenuSection;
-  menu_img: IntegratedMenuSection;
-  menu_text: IntegratedMenuSection;
+  menu_img: MenuImgSection;
   location: LocationSection;
   opening_time: OpeningTimeList;
   useful_info: UsefulInfoSection;
@@ -48,7 +47,6 @@ export type Navigation = {
 export type HeroSection = {
   title: string;
   subtitle: string;
-  image: string;
   call_to_action: CallToAction;
   info: InfoHero[];
 };
@@ -70,7 +68,6 @@ type CallToAction = {
 export type StorySection = {
   title: string;
   subtitle: string;
-  image_src: string;
   milestones: string[];
   lastParagraph: string;
 };
@@ -111,20 +108,15 @@ export type FooterSection = Record<string, never>;
 
 export type GallerySection = {
   title: string;
-};
-
-export type MenuSection = {
-  title: string;
   call_to_action: CallToAction;
 };
 
-
-export type IntegratedMenuSection = {
+export type MenuImgSection = {
   title: string;
-  categories: MenuCategory[];
-}
+  expandable_menu_items: ExpandableItem[];
+};
 
-export type MenuCategory = {
+export type ExpandableItem = {
   title: string;
   dishes: Dish[];
 }

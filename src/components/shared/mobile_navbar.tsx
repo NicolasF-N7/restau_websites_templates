@@ -27,11 +27,11 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
   return (
     <nav>
       <div
-        className={`w-full justify-between flex items-center ${isMenuOpen && 'bg-mobile-menu-bg'} p-5 pt-0`}
+        className={`w-full justify-between flex items-center ${isMenuOpen && 'bg-mobile-menu-bg'} p-5`}
         style={{ zIndex: 101 }}>
 
         <li className="list-none font-bold text-lg">
-            <span className={`${isMenuOpen? 'text-textMobileNavBarOpened' : 'text-textNavbar white-shadow-sm' } text-xl flex items-center`}>
+            <span className={`${isMenuOpen? 'text-textMobileNavBarOpened' : 'text-textNavbar' } text-xl flex items-center`}>
               <img
                 className="mr-3"
                 src="/logo.png"
