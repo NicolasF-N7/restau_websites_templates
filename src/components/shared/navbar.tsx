@@ -8,13 +8,13 @@ function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: st
   return (
     <nav className="flex items-center justify-between">
       <li className="list-none font-bold text-lg">
-          <span className="white-shadow-sm text-textNavbar text-xl flex items-center">
+          <span className="text-textNavbar text-xl flex items-center">
             <img
               className="mr-2 scale-90 transform hover:scale-100 transition-transform duration-500"
               src="/logo.png"
               width="80"/>
 
-              <h2 className="hover:text-black transition-all duration-500 hover:duration-100">
+              <h2 className="transition-all duration-500 hover:duration-100">
                 {businessInfo.name}
               </h2>
           </span>
@@ -36,7 +36,7 @@ function Navbar({ currentPage, businessInfo, navigationInfo } : {currentPage: st
                 smooth={true}
                 offset={-10} 
                 duration={200}
-                className="cursor-pointer font-bold white-shadow-sm">
+                className="cursor-pointer font-bold">
                   {menu}
               </ScrollLink>
             </li>

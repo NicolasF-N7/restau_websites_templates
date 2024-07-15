@@ -4,6 +4,8 @@ import { motion, useAnimation } from 'framer-motion';
 import { InView, useInView } from 'react-intersection-observer';
 import {HeroSection} from '@/data/types/business-data-types'
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
+import { transformToSafeUrl } from '../utility/functions';
 
 const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
 
@@ -87,16 +89,27 @@ const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
                   hidden: { x: -200, opacity: 0 },
                 }}
                 className={`flex flex-col items-start mt-4 text-left text-header-hero uppercase font-light tracking-widest`}>
-                  <h1 className="font-bold white-shadow text-3xl lg:text-4xl xl:text-5xl text-hero-title leading-normal">
+                  <h1 className="font-bold text-3xl lg:text-4xl xl:text-5xl text-hero-title leading-normal">
                     {content.title}
                   </h1>
-                  <h3 className="white-shadow text-hero-subtitle text-md font-bold mt-4 mb-6">
+                  <h3 className="text-hero-subtitle text-md font-bold mt-4 mb-6">
                     {content.subtitle}
                   </h3>
-                  <Link href={content.call_to_action.target_link} 
+
+                  <ScrollLink 
+                    to={transformToSafeUrl(content.call_to_action.target_link)}
+                    smooth={true}
+                    offset={-10}
+                    duration={200}
+                    className="cursor-pointer font-bold">
+                      <div className='inline-block text-mainCTA-text bg-mainCTA-normal py-2 px-4 sm:px-8 sm:py-4 rounded-lg hover:bg-mainCTA-hover transition text-md font-semibold'>{content.call_to_action.text}</div>
+                  </ScrollLink>
+
+
+                  {/* <Link href={content.call_to_action.target_link} 
                     className=''>
                     <div className='inline-block text-mainCTA-text bg-mainCTA-normal py-2 px-4 sm:px-4 rounded-lg hover:bg-mainCTA-hover transition text-md font-semibold'>{content.call_to_action.text}</div>
-                  </Link>
+                  </Link> */}
               </motion.div>
               )}
           </InView>
@@ -122,10 +135,10 @@ const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
                       <img src={info.icon} alt={`${info.title} ${info.subtitle}`} className="h-6 w-6" />
                     </div>
                     <div className="flex flex-col">
-                      <p className="white-shadow-sm text-xl text-black-600 font-bold">
+                      <p className="text-xl text-hero-quick-info font-bold">
                         {info.title}
                       </p>
-                      <p className="white-shadow-sm text-lg text-black-500">{info.subtitle}</p>
+                      <p className="text-lg text-hero-quick-info">{info.subtitle}</p>
                     </div>
                   </div>
                 </motion.div>

@@ -24,8 +24,9 @@ const config: Config = {
 
         'mobile-menu-bg': '#1e212b',
         'hero': {
-          "title": "#000",
-          "subtitle": "#000",
+          "title": "#fff",
+          "subtitle": "#fff",
+          "quick-info": "#fff",
         },
         'mainCTA': {
           "normal": '#FE7F1D',
@@ -39,7 +40,7 @@ const config: Config = {
         },
         "footer-bg": '#1e212b',
         "navbar": '#984848',
-        "textNavbar": '#111',
+        "textNavbar": '#fff',
         "textMobileNavBarOpened": '#fff',
         "expandable": "#e1e1ea",
         "expanded": "#f1f1fa"
