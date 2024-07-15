@@ -42,45 +42,28 @@ const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
       <div className='flex flex-col justify-between'>
         <div className="sm:mt-12">
             {/* H1 + CTA */}
-            <InView threshold={0.25} triggerOnce>
-            {({ ref, inView}) => (
-              <motion.div
-                ref={ref}
-                initial={{ x: -200, opacity: 0 }}
-                animate={inView ? 'visible' : 'hidden'}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                variants={{
-                  visible: { x: 0, opacity: 1 },
-                  hidden: { x: -200, opacity: 0 },
-                }}
-                className={`flex flex-col items-start mt-4 text-left text-header-hero uppercase font-light tracking-widest`}>
-                  <div className='ml-[10%] absolute top-[15%] sm:top-[20%]'>
-                    <h1 className="font-bold text-3xl lg:text-4xl xl:text-5xl text-hero-title leading-normal">
-                      {content.title}
-                    </h1>
-                    <h3 className="text-hero-subtitle text-md font-bold mt-4 mb-6">
-                      {content.subtitle}
-                    </h3>
-                  </div>
-                  
+            
+            <div className={`flex flex-col items-start mt-4 text-left text-header-hero uppercase font-light tracking-widest`}>
+              <div className='ml-[10%] absolute top-[15%] sm:top-[20%]'>
+                <h1 className="font-bold text-3xl lg:text-4xl xl:text-5xl text-hero-title leading-normal">
+                  {content.title}
+                </h1>
+                <h3 className="text-hero-subtitle text-md font-bold mt-4 mb-6">
+                  {content.subtitle}
+                </h3>
+              </div>
+              
 
-                  <ScrollLink 
-                    to={transformToSafeUrl(content.call_to_action.target_link)}
-                    smooth={true}
-                    offset={-10}
-                    duration={200}
-                    className="cursor-pointer font-bold sm:absolute sm:top-[35%] sm:ml-[10%] sm:self-start self-center">
-                      <div className='inline-block text-mainCTA-text bg-mainCTA-normal py-4 px-8 rounded-lg hover:bg-mainCTA-hover transition text-md font-semibold'>{content.call_to_action.text}</div>
-                  </ScrollLink>
-
-
-                  {/* <Link href={content.call_to_action.target_link} 
-                    className=''>
-                    <div className='inline-block text-mainCTA-text bg-mainCTA-normal py-2 px-4 sm:px-4 rounded-lg hover:bg-mainCTA-hover transition text-md font-semibold'>{content.call_to_action.text}</div>
-                  </Link> */}
-              </motion.div>
-              )}
-          </InView>
+              <ScrollLink 
+                to={transformToSafeUrl(content.call_to_action.target_link)}
+                smooth={true}
+                offset={-10}
+                duration={200}
+                className="cursor-pointer font-bold sm:absolute sm:top-[35%] sm:ml-[10%] sm:self-start self-center">
+                  <div className='inline-block text-mainCTA-text bg-mainCTA-normal py-4 px-8 rounded-lg hover:bg-mainCTA-hover transition text-md font-semibold'>{content.call_to_action.text}</div>
+              </ScrollLink>
+            </div>
+              
         </div>
 
         {/* Info list. Shown in overlay for large screens, and below image for smaller screens */}
