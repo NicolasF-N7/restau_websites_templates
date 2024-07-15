@@ -31,7 +31,7 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
         style={{ zIndex: 101 }}>
 
         <li className="list-none font-bold text-lg">
-            <span className={`${isMenuOpen? 'text-textMobileNavBarOpened' : 'text-textNavbar white-shadow-sm' } text-xl flex items-center`}>
+            <span className={`${isMenuOpen? 'text-textMobileNavBarOpened' : 'text-textNavbar' } text-xl flex items-center`}>
               <img
                 className="mr-3"
                 src="/logo.png"
@@ -53,7 +53,7 @@ export default function MobileNavbar({ businessInfo, navigationInfo } : {busines
         </button>
       </div>
       {isMenuOpen && (
-        <ul className={`menu flex flex-col absolute bg-mobile-menu-bg
+        <ul className={`menu flex flex-col absolute bg-mobile-menu-bg top-[5em]
             ${isMenuOpen && "menuRendered"}`}>
 
           {navigationInfo.menus.map((menu, index) => {

@@ -26,7 +26,7 @@ const config: Config = {
         'hero': {
           "title": "#fff",
           "subtitle": "#fff",
-          "quick-info": "#fff",
+          "quick-info": "#000",
         },
         'mainCTA': {
           "normal": '#FE7F1D',

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Page from "@/components/utility/page";
 import Story from "@/components/sections/story";
 import HeroPictSide from "@/components/sections/hero_right_pict";
-import HeroFullscreenPict from "@/components/sections/hero_fullscreen_pict";
+import HeroFullscreenPict from "@/components/sections/hero_fullscreen_pict_noresize";
 import Gallery from "@/components/sections/gallery";
 import Menu from "@/components/sections/menu_pdf";
 import MenuImg from "@/components/sections/menu_img";

@@ -29,7 +29,7 @@ export const business_data = {
             "hero": {
                 "title": "Le burger Toulousain",
                 "subtitle": "10 ans de savoir-faire",
-                "image": "/hero6.jpg",
+                "image": "/hero6-gimp-compressed.jpg",
                 "call_to_action": {
                     "text": "Découvrir le menu",
                     "target_link": "Menu"

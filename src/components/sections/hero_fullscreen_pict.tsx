@@ -17,6 +17,7 @@ const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
       if (imageRef.current) {
         const { height } = imageRef.current.getBoundingClientRect();
         console.log('Video height:', height);
+        console.log('Image height:', imageHeight);
 
         // Get the screen height
         const screenHeight = window.innerHeight;
@@ -27,7 +28,7 @@ const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
         // Offset by 135px to take into account the menu nav bar height
         const overlayHeight = adjustedHeight - 135
         // Height cannot be less than the 320 for small screens
-        adjustedHeight = Math.max(adjustedHeight, 240);
+        adjustedHeight = Math.max(adjustedHeight, 200);
 
         console.log(adjustedHeight)
         
@@ -63,7 +64,7 @@ const HeroFullscreenPict = ({ content }: {content: HeroSection}) => {
                 <Image
                   src={content.image}
                   alt="Hero image"
-                  ref={imageRef}  
+                  ref={imageRef}
                   quality={100}
                   width={2040}
                   height={2040}
