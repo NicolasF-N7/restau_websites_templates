@@ -32,7 +32,7 @@ export const business_data = {
                 "image": "/gallery-11-dim-slim.jpg",
                 "call_to_action": {
                     "text": "Découvrir le menu",
-                    "target_link": "https://www.thong-minh-market.fr/"
+                    "target_link": "#menu"
                 },
                 "info": [
                     {
