@@ -3,6 +3,8 @@ import Head from "next/head";
 import MobileNavbar from "@/components/shared/mobile_navbar";
 import Navbar from "@/components/shared/navbar";
 import {Business, Navigation} from '@/data/types/business-data-types'
+import { GoogleTagManager } from '@next/third-parties/google'
+
 
 function Page({ currentPage, business, navigation, children } : {currentPage: string, business: Business, navigation: Navigation, children: JSX.Element | JSX.Element[]}) {
   const pageTitle = business.name;
@@ -14,6 +16,10 @@ function Page({ currentPage, business, navigation, children } : {currentPage: st
     <div
       className="w-full m-auto flex flex-col items-center justify-center min-h-screen text-black overflow-hidden md:overflow-visible">
       <Head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <GoogleTagManager gtmId="G-5MG9RV6XDY" />
+
+
         <title>{pageTitle}</title>
 
         <link
